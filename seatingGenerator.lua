@@ -2,8 +2,6 @@
 -- please name everyone by first and last name
 -- allow opt out for fee? - if big donor
 
---test
-
 local seatingInfo = {}
 for line in io.lines("/home/edwin/Downloads/seatingInfo.csv") do
     local name, date, diet, datediet, alumni, first, second, third, datefirst, datesecond, datethird, never, datenever = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-)")
