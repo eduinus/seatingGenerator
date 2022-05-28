@@ -3,7 +3,7 @@
 -- allow opt out for fee? - if big donor
 
 local seatingInfo = {}
-for line in io.lines("seatingInfo.csv") do
+for line in io.lines("/home/edwin/Downloads/seatingInfo.csv") do
     local name, date, diet, datediet, alumni, first, second, third, datefirst, datesecond, datethird, never, datenever = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-)")
     seatingInfo[#seatingInfo + 1] = { name = name, date = date, diet = diet, datediet = datediet, alumni = alumni, datealumni = datealumni, first = first, second = second, third = third, datefirst = datefirst, datesecond = datesecond, datethird = datethird, never = never, datenever = datenever }
 end
