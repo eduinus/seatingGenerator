@@ -25,7 +25,8 @@ end
 
 
 
--- conform names
+-- conform names - check for diff spellings re seating preferences, dates
+-- check dates who aren't listed, and prefs who aren't listed
 -- -- create new table
 -- -- split up dates and attendants in big list, noting who is whose date
 -- -- check new list AND seating pref names for conformity using similarity algorithm w/ aided manual review
