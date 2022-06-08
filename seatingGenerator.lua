@@ -32,15 +32,19 @@ for i=1, #rsvpResponse do
     guests[#guests+1] = {name = name, diet = diet, alumni = alumni, first = first, second = second, third = third, never = never, date = date}
 end
 
+for i=1, #guests do
+    local guest = guests[i]
+    print(guest.name)
+    if guest.date ~= nil then
+        if searchGuests(date, guest.date) ~= false then
+            print(guest.date)
+        else
+            print(guest.name.."'s date, ")
+        end
+    end
+end
 
-
--- conform names - check for diff spellings re seating preferences, dates
--- check dates who aren't listed, and prefs who aren't listed
--- -- create new table
--- -- split up dates and attendants in big list, noting who is whose date
--- -- check new list AND seating pref names for conformity using similarity algorithm w/ aided manual review
--- -- conform names using above
--- -- eliminate duplicate rsvps (for multiple rsvps or dates who also rsvped)
+-- check prefs who aren't listed/spelled differently, check date duplicate rsvps, check people with two dates
 -- -- -- what if multiple rsvps have different dates, or no dates? or different info re food etc. (favor last rsvp)
 -- what if two dates?
 -- -- -- what if alumni/current mixed student rsvp?
