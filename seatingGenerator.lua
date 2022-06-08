@@ -1,14 +1,25 @@
--- tell people that as long as you or your date rsvped its fine
--- please name everyone by first and last name
--- allow opt out for fee? - if big donor
+-- instructions:
+-- 1. Everyone gets to bring one guest who you're guaranteed to sit next to (either from the club or outside the club). There is no need for both a person and their date to RSVP.
+-- 2. Please list all names with full first and last names.
+-- 3. Have you moved and need to give us a new address? [second to last rsvp q, not picked up in array]
+-- 4. Has your email changed? [last rsvpify q, not picked up in array]
 
-local seatingInfo = {}
-for line in io.lines("/home/edwin/Downloads/seatingInfo.csv") do
-    local name, date, diet, datediet, alumni, first, second, third, datefirst, datesecond, datethird, never, datenever = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-)")
-    seatingInfo[#seatingInfo + 1] = { name = name, date = date, diet = diet, datediet = datediet, alumni = alumni, datealumni = datealumni, first = first, second = second, third = third, datefirst = datefirst, datesecond = datesecond, datethird = datethird, never = never, datenever = datenever }
+local rsvpResponse = {}
+for line in io.lines("/home/edwin/Downloads/rsvpInfo.csv") do
+	local name, date, diet, datediet, alumni, first, second, third, datefirst, datesecond, datethird, never, datenever = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-)")
+	rsvpResponse[#rsvpResponse + 1] = { name = name, date = date, diet = diet, datediet = datediet, alumni = alumni, datealumni = datealumni, first = first, second = second, third = third, datefirst = datefirst, datesecond = datesecond, datethird = datethird, never = never, datenever = datenever }
 end
 
-print(seatingInfo[10].datefirst)
+function substCompare (name1, name2)
+	if strlen(name1) <= strlen(name2) then
+		testName = name1
+	else
+		testName = name2
+	end
+	for i=1, #
+end
+
+-- print(rsvpResponse[32].date)
 
 -- conform names
 -- -- create new table
