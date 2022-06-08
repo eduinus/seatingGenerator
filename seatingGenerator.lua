@@ -23,7 +23,7 @@ for i=1, #rsvpResponse do
     guests[#guests+1] = {name = name, diet = diet, alumni = alumni, first = first, second = second, third = third, never = never, date = date}
 end
 
--- print(rsvpResponse[32].date)
+
 
 -- conform names
 -- -- create new table
