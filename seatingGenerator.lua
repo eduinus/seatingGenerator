@@ -5,6 +5,7 @@
 -- 4. Has your email changed? [last rsvpify q, not picked up in array]
 
 local rsvpResponse = {}
+
 for line in io.lines("/home/edwin/Downloads/rsvpInfo.csv") do
 	local name, date, diet, dateDiet, alumni, dateAlumni, first, second, third, dateFirst, dateSecond, dateThird, never, dateNever = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-)")
 	rsvpResponse[#rsvpResponse + 1] = { name = name, date = date, diet = diet, dateDiet = dateDiet, alumni = alumni, dateAlumni = dateAlumni, first = first, second = second, third = third, dateFirst = dateFirst, dateSecond = dateSecond, dateThird = dateThird, never = never, dateNever = dateNever }
