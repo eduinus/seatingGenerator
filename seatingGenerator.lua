@@ -6,17 +6,20 @@
 
 local rsvpResponse = {}
 for line in io.lines("/home/edwin/Downloads/rsvpInfo.csv") do
-	local name, date, diet, datediet, alumni, first, second, third, datefirst, datesecond, datethird, never, datenever = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-)")
-	rsvpResponse[#rsvpResponse + 1] = { name = name, date = date, diet = diet, datediet = datediet, alumni = alumni, datealumni = datealumni, first = first, second = second, third = third, datefirst = datefirst, datesecond = datesecond, datethird = datethird, never = never, datenever = datenever }
+	local name, date, diet, dateDiet, alumni, dateAlumni, first, second, third, dateFirst, dateSecond, dateThird, never, dateNever = line:match("%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-),%s*(.-)")
+	rsvpResponse[#rsvpResponse + 1] = { name = name, date = date, diet = diet, dateDiet = dateDiet, alumni = alumni, dateAlumni = dateAlumni, first = first, second = second, third = third, dateFirst = dateFirst, dateSecond = dateSecond, dateThird = dateThird, never = never, dateNever = dateNever }
 end
 
-function substCompare (name1, name2)
-	if strlen(name1) <= strlen(name2) then
-		testName = name1
-	else
-		testName = name2
-	end
-	for i=1, #
+local guests = {}
+
+for i=1, #rsvpResponse do
+    local name, diet, alumni, first, second, third, never, date = rsvpResponse[i].name, rsvpResponse[i].diet, rsvpResponse[i].alumni, rsvpResponse[i].first, rsvpResponse[i].second, rsvpResponse[i].third, rsvpResponse[i].never, rsvpResponse[i].date
+    
+    guests[#guests+1] = {name = name, diet = diet, alumni = alumni, first = first, second = second, third = third, never = never, date = date}
+    
+    local name, diet, alumni, first, second, third, never, date = rsvpResponse[i].date, rsvpResponse[i].dateDiet, rsvpResponse[i].dateAlumni, rsvpResponse[i].dateFirst, rsvpResponse[i].dateSecond, rsvpResponse[i].dateThird, rsvpResponse[i].dateNever, rsvpResponse[i].name
+    
+    guests[#guests+1] = {name = name, diet = diet, alumni = alumni, first = first, second = second, third = third, never = never, date = date}
 end
 
 -- print(rsvpResponse[32].date)
