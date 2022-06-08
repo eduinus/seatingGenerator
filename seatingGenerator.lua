@@ -44,13 +44,10 @@ for i=1, #guests do
     end
 end
 
--- check prefs who aren't listed/spelled differently, check date duplicate rsvps, check people with two dates
--- -- -- what if multiple rsvps have different dates, or no dates? or different info re food etc. (favor last rsvp)
--- what if two dates?
+-- check prefs who aren't listed/spelled differently, check date duplicate rsvps, check people with two dates, in the case of conflicting info on food or dates prefs etc, err on side of later rsvp
+-- remove people who chose dates as first seating pref
+-- make sure that each persons date is also their date
 -- -- -- what if alumni/current mixed student rsvp?
-
--- remove people's first prefs who are the same names as their dates lol
--- make sure that each person's date is their date
 
 -- input table size(s), number of tables
 
@@ -59,7 +56,6 @@ end
 -- arrange alumni tables
 -- -- try a few times randomly via crude genetic algorithm (re whose first first goes first etc.)
 -- arrange current student tables
--- -- try a few times randomly via crude genetic algorithm (re whose first first goes first etc.)
 
 -- Produce useful summaries
 -- seating chart
