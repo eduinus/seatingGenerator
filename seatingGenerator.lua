@@ -47,7 +47,7 @@ end
 -- check prefs who aren't listed/spelled differently, check date duplicate rsvps, check people with two dates, in the case of conflicting info on food or dates prefs etc, err on side of later rsvp
 -- remove people who chose dates as first seating pref
 -- make sure that each persons date is also their date
--- -- -- what if alumni/current mixed student rsvp?
+-- what if alumni/current mixed student rsvp?
 
 -- input table size(s), number of tables
 
