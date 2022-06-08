@@ -33,6 +33,7 @@ end
 -- -- conform names using above
 -- -- eliminate duplicate rsvps (for multiple rsvps or dates who also rsvped)
 -- -- -- what if multiple rsvps have different dates, or no dates? or different info re food etc. (favor last rsvp)
+-- what if three dates?
 -- -- -- what if alumni/current mixed student rsvp?
 
 -- remove people's first prefs who are the same names as their dates lol
