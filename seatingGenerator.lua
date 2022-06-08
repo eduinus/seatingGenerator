@@ -4,6 +4,15 @@
 -- 3. Have you moved and need to give us a new address? [second to last rsvp q, not picked up in array]
 -- 4. Has your email changed? [last rsvpify q, not picked up in array]
 
+function searchGuests (search, term)
+    for i=1, #guests do
+        if guests.search == term then
+            return i
+        end
+    end
+    return false
+end
+
 local rsvpResponse = {}
 
 for line in io.lines("/home/edwin/Downloads/rsvpInfo.csv") do
